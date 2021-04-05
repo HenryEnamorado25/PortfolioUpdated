@@ -43,14 +43,41 @@ body {
 }
 
 .hamburger i {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
   color: white;
   font-size: 3rem;
   margin: 2rem 2rem auto auto;
+  cursor: pointer;
   display: none;
+  z-index: 5;
+}
+.hamburger i:hover {
+  color: rgb(1, 160, 252);
 }
 @media screen and (max-width: 950px) {
+  .navBar {
+    /*display: none;*/
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -2.5rem;
+    background-color: rgb(27, 27, 27, 0.9);
+    align-items: center;
+    min-height: 70%;
+    width: 91vw;
+    z-index: -3;
+  }
   .navBar li {
-    display: none;
+    margin-top: 2rem;
+    border-bottom: solid 1px rgb(1, 160, 252);
+    width: 50%;
+    text-align: center;
+  }
+  .navBar li:hover {
+    width: 55%;
   }
   .hamburger i {
     display: block;
@@ -79,6 +106,42 @@ body {
   color: #505050;
   letter-spacing: 0.7rem;
 }
+@media screen and (max-width: 630px) {
+  .presentation {
+    margin-left: 1rem;
+  }
+  .logo p {
+    margin-left: 1rem;
+  }
+  .Iam {
+    font-size: 2rem;
+    margin-bottom: -0.6rem !important;
+  }
+  .web {
+    margin: -0.6rem 0 !important;
+    font-size: 3rem !important;
+  }
+  .navBar {
+    width: 88vw;
+  }
+}
+@media screen and (max-width: 351px) {
+  .Iam {
+    font-size: 1.5rem !important;
+    margin-top: 4rem;
+  }
+  .web {
+    font-size: 2rem !important;
+    margin: 2px 0;
+  }
+  .navBar {
+    width: 82vw;
+  }
+}
+/**********************/
+/********************/
+/*media for header*/
+
 .web {
   margin: -2rem 0rem;
   font-size: 5rem;
@@ -130,6 +193,31 @@ body {
 
 /*end of Header*/
 
+/**************************
+* Side Icons begin       *
+**************************/
+.sideIcons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: -4rem;
+  top: 70%;
+}
+.sideIcons i {
+  font-size: 2rem;
+  color: #888888;
+  margin-top: 0.7rem;
+  cursor: pointer;
+}
+.sideIcons i:hover {
+  color: rgb(1, 160, 252);
+  font-size: 2.1rem;
+}
+
+/**************************
+* Side Icons end       *
+**************************/
+
 /*about ME begin*/
 .aboutMe {
   background: rgb(19, 19, 19);
@@ -174,6 +262,27 @@ body {
 .info p {
   font-size: 2rem;
   margin: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .aboutContent p {
+    width: 90%;
+    margin: 0.3rem;
+  }
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info p,
+  .info i {
+    font-size: 1rem;
+    margin: 0.5rem 0.2rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .info p,
+  .info i {
+    font-size: 1.5rem;
+  }
 }
 /*about Me EEND*/
 
@@ -327,6 +436,11 @@ body {
   width: 95%;
   border: none;
 }
+@media only screen and (max-width: 800px) {
+  .contactForm {
+    width: 80%;
+  }
+}
 .formInput {
   min-height: 3rem;
   max-height: 3rem;
@@ -376,7 +490,7 @@ input[type="text"],
   border-radius: 2px;
   font-family: "Oswald", sans-serif;
   letter-spacing: 0.1rem;
-  width: 25%;
+  width: 35%;
 }
 .sendBtn:hover,
 .sendBtn:focus {
@@ -409,5 +523,16 @@ input[type="text"],
 .footerText p {
   color: #fff;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .footerText p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .footerText p {
+    font-size: 1rem;
+  }
 }
 /*contact section End*/
